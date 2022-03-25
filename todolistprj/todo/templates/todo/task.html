@@ -1,3 +1,11 @@
 <h1>Task: {{ task }}</h1>
+</tr>
+    {% for descriptions in task.description %}
+    <tr>
+        <p>{{descriptions}}</p>
+    </tr>
+    {% empty %}
+    <h3>No Description Available</h3>
+    {% endfor %}
 
 <a href="{% url 'task' %}">Go Back</a>
